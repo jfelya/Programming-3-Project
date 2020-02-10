@@ -1,5 +1,4 @@
-Crazy change 2
-Second change
+Crazy change 2 and Crazy change!!
 Third change in remote repository
 Fourth change in remote repository
 Fifth change
