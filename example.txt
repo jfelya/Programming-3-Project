@@ -3,3 +3,4 @@ Second change
 Third change in remote repository
 Fourth change in remote repository
 Fifth change
+6th change on local
