@@ -1,40 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Eliminar Usuario</title>
-	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
-	<link rel="stylesheet" type="text/css" href="felystyles.css">
-</head>
 <?php
 session_start();
-if (!isset($_SESSION["usuario"]) or $_SESSION["sesion_activa"] == False or $_SESSION["nivel"] !== "admin")
-{
-	header("Location:cerrar_sesion.php");
-} //SI NO HAY SESION O NO ES ADMIN
-else
-{
-	?>
-	<body>
-		<center>
-			<?php
-			$usuario = $_REQUEST['usuario'];
-			include("conexion.php");
-			$query = "DELETE FROM usuarios WHERE usuario='$usuario'";
-			$resultado = $conexion->query($query);
+include("funciones/sesionActiva.php");
+sesionActiva();
 
-			if ($resultado) 
-			{
-				header("Location:lista_de_usuarios.php");
-			}
-			else
-			{
-				header("Location:lista_de_usuarios.php");
-			}
-			?>
-		</center>
-	</body>
-	<?php
+if (isset($_REQUEST["id_producto"]))
+{
+	$id_producto = $_REQUEST['id_producto'];
+	include("conexion.php");
+	$query = "DELETE FROM producto WHERE id_producto='$id_producto'";
+	$resultado = $conexion->query($query);
+
+	if ($resultado) 
+	{
+		header("Location:lista_de_productos.php");
+	}
+	else
+	{
+		header("Location:lista_de_productos.php");
+	}
+}
+if (isset($_REQUEST["id_cliente"]))
+{
+	$id_cliente = $_REQUEST['id_cliente'];
+	include("conexion.php");
+	$query = "DELETE FROM usuarios WHERE id_cliente='$id_cliente'";
+	$resultado = $conexion->query($query);
+
+	if ($resultado) 
+	{
+		header("Location:lista_de_usuarios.php");
+	}
+	else
+	{
+		header("Location:lista_de_usuarios.php");
+	}
 }
 ?>
-</html>
