@@ -1,58 +1,48 @@
 <?php
 session_start();
-if (isset($_REQUEST["error"]) and isset($_REQUEST["error"]))
-{
-	if ($_SESSION["error"] !== "" and $_REQUEST["error"] == 1)
-	{
-		echo "<script>alert('".$_SESSION["error"]."')</script>";
-		unset($_SESSION["error"]);
-	} //SI NO HAY ERRORES
-} //SI LOS ERRORES ESTÁN PUESTOS
-
-//EXITO CON LA CONTRASEÑA
-if (isset($_REQUEST["exito"]))
-{
-	if ($_SESSION["recuperar_exito"] !== "" and $_REQUEST["exito"] == 1)
-	{
-		echo "<script>alert('".$_SESSION["recuperar_exito"]."')</script>";
-		unset($_SESSION["recuperar_exito"]);
-	}
-}
-//EXITO CON LA CONTRASEÑA
-
-if (isset($_SESSION["usuario"]) and $_SESSION["sesion_activa"] == True)
-{
-	header("Location:mainpage.php");
-} //SI NO HAY SESION O NO ES ADMIN
-else
-{
-	?>
-	<!DOCTYPE html>
-	<html>
-	<head>
-		<title>Guayuco Digital Login</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrapguayuco.css">
-		<link rel="stylesheet" type="text/css" href="guayucostyles.css">
-	</head>
-	<body>
+include("funciones/validacion_login/mostrarError.php");
+include("funciones/validacion_login/mostrarExito.php");
+include("funciones/validacion_login/sesionActiva.php");
+mostrarError();
+mostrarExito();
+sesionActiva();
+?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Equipate Full Login</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css/bootstrapguayuco.css">
+    <link rel="stylesheet" type="text/css" href="css/guayucostyles.css">
+	<script src="javascript/SmoothScroll.min.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<center>
 		<div class="loginbox">
-			<p class="title">Bienvenido al Guayuco Digital</p>
-			<form action="login_proceso.php" method="post">
-				<div class="form-group">
-					<label for="usuario">Usuario</label>
-					<input class="form-control" id="usuario" type="text" name="usuario" autofocus="yes">
+			<p class="title">Bienvenido a <br>Equipate Full</p><br>
+			<form action="procesos/login_proceso.php" method="post">
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-label" for="usuario">Usuario
+					</label>
+					<div class="col-sm-7">
+						<input class="form-control" id="usuario" type="text" name="usuario" autofocus="yes">
+					</div>
 				</div>
-				<div class="form-group">
-					<label for="contrasena">Contraseña</label>
-					<input class="form-control" id="contrasena" type="password" name="contrasena">
-					<a class="links" href="recuperar_contrasena.php">Olvidé mi contraseña</a>
+				<div class="form-group row">
+					<label class="col-sm-4 col-form-label" for="contrasena">Contraseña
+					</label>
+					<div class="col-sm-7">
+						<input class="form-control" id="contrasena" type="password" name="contrasena">
+					</div>
 				</div>
-				<input class="btn btn-outline-primary btn-block" data-toggle="tooltip" data-placement="top" title="Ingresar a la página" type="submit" name="ingresarBtn" value="Ingresar">
+				<a class="enlaces" href="recuperar_contrasena.php">Olvidé mi contraseña</a> /
+				<a class="enlaces" href="registrarse.php">Registrarse</a><br><br>
+				<center>
+					<input class="btn btn-outline-info btn-block" type="submit" name="ingresarBtn" value="Ingresar">
+				</center>
 			</form>
-			<?php
-		}
-		?>
 	</div>
+</center>
 </body>
 </html>
