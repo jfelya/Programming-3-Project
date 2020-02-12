@@ -19,9 +19,13 @@ html{
     background-color: #212624;
     height: auto;
     opacity: 0.98;
-    padding: 30px;
+    padding: 40px;
     border-radius: 20px;
     text-align: center;
+  }
+  #cliente {
+    color: silver;
+    text-align: right;
   }
   .usertext
   {

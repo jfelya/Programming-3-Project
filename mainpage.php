@@ -15,16 +15,26 @@ sesionInactiva();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<center>
-		<div class="mainbox">
-			<p class="title">Página Principal de Equipate Full</p>
-			<p style="color: silver;">Cliente: 
+	<div class="container-fluid">
+	<div class="row">
+			<div class="col-sm-12">
+				<h1 class="title">Página Principal de Equipate Full</h1>
+			</div>
+		</div><br>
+		<div class="row">
+			<div class="col-sm-8"></div>
+			<div class="col-sm-4">
+			<p id="cliente">Cliente: 
 				<span class="usertext">
 					<?php 
 					echo $_SESSION["usuario"];
 					?>
 				</span>
 			</p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
 			<table class="table table-dark table-hover">
 				<thead>
 					<tr>
@@ -53,10 +63,25 @@ sesionInactiva();
 					?>
 				</tbody>
 			</table>
-			<a class="btn btn-outline-secondary" href="ver_carrito.php">Ver Carrito</a>
-			<a class="btn btn-outline-secondary" href="ver_facturas.php">Ver Facturas</a><br><br>
-			<a class="btn btn-outline-danger" data-toggle="tooltip" data-placement="top" title="Cerrar la sesión"  href="procesos/cerrar_sesion.php">Cerrar Sesión</a>
+			</div>
 		</div>
-	</center>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-3">
+				<a class="btn btn-outline-secondary btn-block" href="ver_carrito.php">Ver Carrito</a>
+			</div>
+			<div class="col-sm-3">
+				<a class="btn btn-outline-secondary btn-block" href="ver_facturas.php">Ver Facturas</a>
+			</div>
+			<div class="col-sm-3"></div>
+		</div><br>
+		<div class="row">
+			<div class="col-sm-3"></div>
+			<div class="col-sm-6">
+				<a class="btn btn-outline-danger btn-block" data-toggle="tooltip" data-placement="top" title="Cerrar la sesión"  href="procesos/cerrar_sesion.php">Cerrar Sesión</a>
+			</div>
+			<div class="col-sm-3"></div>
+		</div>
+	</div>
 </body>
 </html>
