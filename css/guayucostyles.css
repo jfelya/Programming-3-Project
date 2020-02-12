@@ -11,47 +11,17 @@ html{
       background-position: center; 
       background-repeat: no-repeat; 
       background-attachment: fixed;
+      margin: 20px;
       align-content: center;
   }
-  .loginbox{   
-      color: #A4978E;
-      background-color: #212624;
-      height: auto;
-      text-align: center;
-      opacity: 0.98;
-  }
-  .mainbox{
-      color: #A4978E;
-      background-color: #212624;
-      height: auto;
-      opacity: 0.98;    
-  }
-  .userbox{
-      color: #A4978E;
-      background-color: #212624;
-      height: auto;
-      opacity: 0.98;
-  }
-  .adminbox{
-      color: #A4978E;
-      background-color: #212624;
-      height: auto;
-      text-align: center;
-      opacity: 0.98;
-  }
-  .recuperarbox{
-      color: #A4978E;
-      background-color: #212624;
-      height: auto;
-      text-align: center;
-      opacity: 0.98;
-  }
-  .recuperarboxdos{
-      color: #A4978E;
-      background-color: #212624;
-      height: auto;
-      text-align: center;
-      opacity: 0.98;
+  .container-fluid {
+    color: #A4978E;
+    background-color: #212624;
+    height: auto;
+    opacity: 0.98;
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
   }
   .usertext
   {

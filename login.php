@@ -19,7 +19,6 @@ sesionActiva();
 </head>
 <body>
 	<div class="container-fluid">
-		<!-- <div class="loginbox"> -->
 			<p class="title">Bienvenido a <br>Equipate Full</p><br>
 			<form action="procesos/login_proceso.php" method="post">
 				<div class="form-group row">
@@ -42,7 +41,6 @@ sesionActiva();
 					<input class="btn btn-outline-info btn-block" type="submit" name="ingresarBtn" value="Ingresar">
 				</center>
 			</form>
-		<!-- </div> -->
 	</div>
 </body>
 </html>
