@@ -1,3 +1,0 @@
-This is example 2
-7th change on local
-8th change on remote
