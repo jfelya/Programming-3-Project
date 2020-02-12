@@ -4,10 +4,10 @@ $usuario = "guayuco";
 $contra = "digital";
 $db = "guayuco_digital";
 
-// Create connection
+// Crear conexión
 $conexion = new mysqli($servidor, $usuario, $contra, $db);
 
-// Check connection
+// Revisar la conexión
 if ($conexion->connect_error) {
     die("La conexión falló: " . $conexion->connect_error);
 }
