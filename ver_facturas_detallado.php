@@ -25,17 +25,27 @@ if (isset($_REQUEST["id_factura"]) && $_REQUEST["id_factura"] !== "") {
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<center>
-		<div class="facturabox">
-			<p class="title">Detalle de la factura: <span class="usertext">
-				<?php echo $_REQUEST["id_factura"]; ?>
-			</span>
-			</p>
-			<?php
-			verFacturaDetallado($_REQUEST["id_factura"]);
-			?>
+	<div class="container-fluid">
+		<div class="row">
+				<div class="col-sm-1"></div>
+					<div class="col-sm-10">
+						<h2 class="title">Detalle Factura</h2>
+					</div>
+					<div class="col-sm-1">
+						<a class="btn btn-outline-secondary btn-block"  href="mainpage.php"><</a>
+					</div>
+				</div>
+				<!-- ERROR CON LOS DIV -->
+		</div><br>
+			<div class="row">
+				<div class="col-sm-12">
+					<?php
+					verFacturaDetallado($_REQUEST["id_factura"]);
+					?>
+				</div>
+			</div>
 		</div>
-	</center>
+	</div>	
 </body>
 </html>
 <?php

@@ -11,13 +11,17 @@ function verFacturas() {
 	$row = $resultado->fetch_assoc();
 	if (!$row) {
 		?>
-		<p>Actualmente no tienes ninguna factura a tu nombre</p><br>
-		<a class="btn btn-outline-secondary"  href="mainpage.php">Regresar</a>
-		<a class="btn btn-outline-danger" href="procesos/cerrar_sesion.php">Cerrar Sesión</a>
+		<div class="row">
+			<div class="col-sm-12">
+				<p>Actualmente no tienes ninguna factura a tu nombre</p>
+			</div>
+		</div>
+		<br>
 		<?php
 	} else {
 		?>
-		<center>
+		<div class="row">
+			<div class="col-sm-12">
 			<table class="table table-dark table-hover" >
 				<tbody>
 					<tr>
@@ -62,9 +66,8 @@ function verFacturas() {
 					?>
 				</tbody>
 			</table><br>
-		</center>
-		<a class="btn btn-outline-secondary"  href="mainpage.php">Regresar</a>
-		<a class="btn btn-outline-danger" href="procesos/cerrar_sesion.php">Cerrar Sesión</a>
+			</div>
+		</div>
 		<?php
 	}
 }

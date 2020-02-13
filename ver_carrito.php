@@ -48,6 +48,9 @@ include("funciones/verPrecioTotal.php");
 								<th class="tabletitle">
 									Cantidad
 								</th>
+								<th class="tabletitle">
+									Opciones
+								</th>
 							</tr>
 							<?php
 							verCarrito();
