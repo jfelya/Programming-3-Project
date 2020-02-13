@@ -28,7 +28,7 @@ function verPrecioTotal() {
 		Location("procesos/vaciar_carrito.php");
 	} else {
 		?>
-		<p>Precio total: <?php echo $_SESSION["preciototal"]; ?> <span style="color:#54678F;">bsS</span></p>
+		<?php echo "Precio Total: ".$_SESSION["preciototal"]; ?> <span style="color:#54678F;">bsS</span></td>
 		<?php
 	}
 }

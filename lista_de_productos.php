@@ -16,8 +16,7 @@ mostrarErrorExito();
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
-	<center>
-		<div class="listabox2"><table class="table table-dark table-hover">
+	<div class="container-fluid">
 		<table class="table table-dark table-hover">
 			<thead>
 				<tr>
@@ -49,6 +48,5 @@ mostrarErrorExito();
 		<a class="btn btn-outline-info" href="admin.php?registrar_producto">Regresar</a>
 		<a class="btn btn-outline-danger"  href="procesos/cerrar_sesion.php">Cerrar Sesión</a>
 	</div>
-	</center>
 </body>
 </html>
