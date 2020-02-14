@@ -5,7 +5,7 @@ function verFacturaDetallado($id_factura) {
 			<tbody>
 				<tr>
 					<th class="tabletitle">
-						Producto
+						Productos
 					</th>
 					<th class="tabletitle">
 						Cantidad
@@ -61,23 +61,23 @@ function verFacturaDetallado($id_factura) {
 				</tr>
 				<?php
 				include("conexion.php");
-				$query = "SELECT * FROM factura WHERE id_factura = '$id_factura'";
-				$resultado = $conexion->query($query);
+				$query3 = "SELECT * FROM factura WHERE id_factura = '$id_factura'";
+				$resultado3 = $conexion->query($query3);
 				$usuario = $_SESSION["usuario"];
-				$row = $resultado->fetch_assoc();
+				$row3 = $resultado3->fetch_assoc();
 					?>
 					<tr>
 						<td>
-							<?php echo $row['id_factura']; ?></a>
+							<?php echo $row3['id_factura']; ?></a>
 						</td>
 						<td>
-							<?php echo $row['fecha']; ?>
+							<?php echo $row3['fecha']; ?>
 						</td>
 						<td>
 							<?php echo $usuario; ?>
 						</td>
 						<td>
-							<?php echo $row['preciototal']; ?>  <span style="color:#54678F;">bsS</span>
+							<?php echo $row3['preciototal']; ?>  <span style="color:#54678F;">bsS</span>
 						</td>
 					</tr>
 			</tbody>

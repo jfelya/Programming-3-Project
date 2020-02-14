@@ -23,7 +23,7 @@ html{
     border-radius: 20px;
     text-align: center;
   }
-  #cliente {
+  #cliente, #usuario {
     color: silver;
     text-align: right;
   }
@@ -45,6 +45,7 @@ html{
       color: #A7414A;
       font-weight: bold;
       opacity: 0.9;
+      font-size: 12px;
   }
   .table-dark{
       color: #A4978E;

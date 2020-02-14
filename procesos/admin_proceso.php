@@ -28,7 +28,7 @@ if (isset($_POST["boton_modificar"]) and $_REQUEST["modificar"] = "1" and isset(
 		or $respuesta_secreta == "")
 	{
 		$_SESSION["admin_error"] .= "Los campos no pueden estar vacíos. ";
-		header("Location:../admin.php?modificar_usuario&id_cliente=$id_cliente&admin_error");
+		header("Location:../admin-usuario.php?modificar_usuario&id_cliente=$id_cliente&admin_error");
 		} // SI LOS CAMPOS ESTAN VACÍOS
 		else
 		{
@@ -100,7 +100,7 @@ if (isset($_POST["boton_modificar"]) and $_REQUEST["modificar"] = "1" and isset(
 					{
 						mysqli_close($conexion);
 						$_SESSION["admin_error"] .= "Ha sucedido un error inesperado. Por favor, vuelva a intentarlo";
-						header("Location:../admin.php?modificar_usuario&id_cliente=$id_cliente&admin_error");
+						header("Location:../admin-usuario.php?modificar_usuario&id_cliente=$id_cliente&admin_error");
 					} //SI NO HAY RESULTADOS
 				} //SI NO HAY ERRORES
 				//COMPROBACIÓN PRINCIPAL

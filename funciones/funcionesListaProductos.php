@@ -40,10 +40,10 @@ function mostrarProductos() {
 				<?php echo $row['precio']; ?> <span style="color:#54678F;">bsS</span>
 			</td>
 			<td>
-				<a class="enlaces" href="admin.php?modificar_producto&id_producto=<?php echo $row['id_producto']; ?>">Modificar</a>
+				<a class="btn btn-outline-secondary" href="admin-producto.php?modificar_producto&id_producto=<?php echo $row['id_producto']; ?>">Modificar</a>
 			</td>
 			<td>
-				<a class="enlaces" href="borrar.php?id_producto=<?php echo $row['id_producto']; ?>">Eliminar</a>
+				<a class="btn btn-outline-warning" href="borrar.php?id_producto=<?php echo $row['id_producto']; ?>">X</a>
 			</td>				
 		</tr>
 		<?php

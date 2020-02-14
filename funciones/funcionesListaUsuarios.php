@@ -36,9 +36,6 @@ function mostrarUsuarios() {
 				<?php echo $row['nombre']; ?>
 			</td>
 			<td>
-				<?php echo $row['apellido']; ?>
-			</td>
-			<td>
 				<?php echo $row['usuario']; ?>
 			</td>
 			<td>
@@ -51,7 +48,7 @@ function mostrarUsuarios() {
 				<?php echo $row['respuesta_secreta']; ?>
 			</td>
 			<td>
-				<a class="enlaces" href="admin.php?modificar_usuario=1&id_cliente=<?php echo $row['id_cliente']; ?>">Modificar</a>
+				<a class="btn btn-outline-secondary" href="admin-usuario.php?modificar_usuario=1&id_cliente=<?php echo $row['id_cliente']; ?>">Modificar</a>
 			</td>
 			<td>
 				<?php
@@ -61,7 +58,7 @@ function mostrarUsuarios() {
 					<?php
 				} else {
 					?>
-					<a class="enlaces" href="borrar.php?id_cliente=<?php echo $row['id_cliente']; ?>">Eliminar</a>
+					<a class="btn btn-outline-warning" href="borrar.php?id_cliente=<?php echo $row['id_cliente']; ?>">X</a>
 					<?php
 				}
 				?>

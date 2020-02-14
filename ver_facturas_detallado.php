@@ -16,12 +16,9 @@ if (isset($_REQUEST["id_factura"]) && $_REQUEST["id_factura"] !== "") {
 
 		<title>Factura Detallada</title>
 		<meta charset="utf-8">
-
-		<!-- Importacion librerias de bootstrap , css y javascrip -->
 		<link rel="stylesheet" type="text/css" href="css/bootstrapguayuco.css">
 		<link rel="stylesheet" type="text/css" href="css/guayucostyles.css">
 		<script src="javascript/SmoothScroll.min.js"></script>
-		<!-- Importacion librerias de bootstrap , css y javascrip -->
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
