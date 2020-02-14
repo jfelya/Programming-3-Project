@@ -26,4 +26,3 @@ function sesionActiva() {
 	}
 	//SI ES ADMIN
 }
-?>

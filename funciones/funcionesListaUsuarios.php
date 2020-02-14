@@ -1,36 +1,36 @@
 <?php
-function mostrarErrorExito() {
+function mostrarErrorExito()
+{
 	// ERROR PRODUCTO
-	if (isset($_SESSION["admin_error"]) and isset($_REQUEST["admin_error"]))
-	{
+	if (isset($_SESSION["admin_error"]) and isset($_REQUEST["admin_error"])) {
 		if ($_SESSION["admin_error"] !== "" and isset($_REQUEST["producto_erradmin_erroroadmin_errorr"])) {
-			echo "<script>alert('".$_SESSION["admin_error"]."')</script>";
+			echo "<script>alert('" . $_SESSION["admin_error"] . "')</script>";
 			unset($_SESSION["admin_error"]);
-		} 
+		}
 		//SI HAY ERRORES
-	} 
+	}
 	//SI LOS ERRORES ESTÁN PUESTOS
 	// ERROR PRODUCTO
 
 	// EXITO PRODUCTO
 	if (isset($_SESSION["admin_exito"]) and isset($_REQUEST["admin_exito"])) {
 		if ($_SESSION["admin_exito"] !== "" and isset($_REQUEST["admin_exito"])) {
-			echo "<script>alert('".$_SESSION["admin_exito"]."')</script>";
+			echo "<script>alert('" . $_SESSION["admin_exito"] . "')</script>";
 			unset($_SESSION["admin_exito"]);
-		} 
+		}
 		//SI ES EXITOSOS
-	} 
+	}
 	//SI EL EXITO ESTÁ PUESTO
 	// EXITO PRODUCTO
 }
 
-function mostrarUsuarios() {
+function mostrarUsuarios()
+{
 	include("conexion.php");
 	$query = "SELECT * FROM usuarios";
 	$resultado = $conexion->query($query);
-	while ($row = $resultado->fetch_assoc())
-	{
-		?>
+	while ($row = $resultado->fetch_assoc()) {
+?>
 		<tr>
 			<td>
 				<?php echo $row['nombre']; ?>
@@ -53,18 +53,18 @@ function mostrarUsuarios() {
 			<td>
 				<?php
 				if ($row["usuario"] == $_SESSION["usuario"]) {
-					?>
+				?>
 					--------
-					<?php
+				<?php
 				} else {
-					?>
+				?>
 					<a class="btn btn-outline-warning" href="borrar.php?id_cliente=<?php echo $row['id_cliente']; ?>">X</a>
-					<?php
+				<?php
 				}
 				?>
-			</td>							
+			</td>
 		</tr>
-		<?php
+<?php
 	}
 }
 ?>

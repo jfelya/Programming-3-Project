@@ -3,7 +3,6 @@ session_start();
 include("../funciones/sesionInactiva.php");
 include("../conexion.php");
 sesionInactiva();
-//
 if (isset($_REQUEST["compra"]) && isset($_SESSION["carrito"]) && isset($_SESSION["preciototal"])) {
 	//GENERACION DEL ID DE LA FACTURA PRINCIPAL
 	$id_factura = rand(1, 989898);
@@ -73,4 +72,3 @@ if (isset($_REQUEST["compra"]) && isset($_SESSION["carrito"]) && isset($_SESSION
 	//REDIRECCIONAR
 	header("Location:../ver_facturas_detallado.php?exito&id_factura=$id_factura");
 }
-?>

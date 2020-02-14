@@ -43,4 +43,3 @@ function mostrarErrorExito() {
 	//SI EL EXITO ESTÁ PUESTO
 	// EXITO PRODUCTO
 }
-?>

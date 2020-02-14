@@ -177,4 +177,3 @@ if (isset($_POST["boton_modificar"]) and $_REQUEST["modificar"] = "1" and isset(
 			} // SI LOS CAMPOS NO ESTAN VACÍOS
 		} // SI EL USUARIO NO EXISTE
 	} // SI EL BOTÓN ESTÁ PRESIONADO
-	?>

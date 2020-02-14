@@ -12,4 +12,3 @@ function sesionInactiva() {
 	}
 	//SI NO HAY SESION
 }
-?>

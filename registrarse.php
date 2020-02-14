@@ -9,17 +9,18 @@ sesionActiva();
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Registrarse</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/bootstrapguayuco.css">
-    <link rel="stylesheet" type="text/css" href="css/guayucostyles.css">
+	<link rel="stylesheet" type="text/css" href="css/guayucostyles.css">
 	<script src="javascript/SmoothScroll.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
-	<center>
-		<div class="userbox">
+	<div class="container-fluid">
 		<p class="title">Registrarse por primera vez</p>
 		<form name="registrarse" action="procesos/registrarse_proceso.php" method="POST">
 			<!-- NOMBRE -->
@@ -95,42 +96,43 @@ sesionActiva();
 				</label>
 				<div class="col-sm-7">
 					<select class="form-control" name="nivel" id="nivel">
-						<option>Cliente</option></select>
-					</div>
+						<option>Cliente</option>
+					</select>
 				</div>
-				<!-- NIVEL  -->
-				<!-- PREGUNTA SECRETA -->
-				<div class="form-group row">
-					<label class="col-sm-4 col-form-label" for="pregunta_secreta">
-						Pregunta secreta
-					</label>
-					<div class="col-sm-7">
-						<select class="form-control" name="pregunta_secreta" id="pregunta_secreta">
-							<option></option>
-							<option>Color Favorito</option>
-							<option>Comida Favorita</option>
-							<option>Banda Favorita</option>
-							<option>Animal Favorito</option>
-						</select>
-					</div>
+			</div>
+			<!-- NIVEL  -->
+			<!-- PREGUNTA SECRETA -->
+			<div class="form-group row">
+				<label class="col-sm-4 col-form-label" for="pregunta_secreta">
+					Pregunta secreta
+				</label>
+				<div class="col-sm-7">
+					<select class="form-control" name="pregunta_secreta" id="pregunta_secreta">
+						<option></option>
+						<option>Color Favorito</option>
+						<option>Comida Favorita</option>
+						<option>Banda Favorita</option>
+						<option>Animal Favorito</option>
+					</select>
 				</div>
-				<!-- PREGUNTA SECRETA -->
-				<!-- RESPUESTA SECRETA -->
-				<div class="form-group row">
-					<label class="col-sm-4 col-form-label" for="respuesta_secreta">
-						Respuesta secreta
-					</label>
-					<div onkeyup="letraMinuscula3()" class="col-sm-7">
-						<input class="form-control" id="respuesta_secreta" type="text" name="respuesta_secreta" required>
-					</div>
-					<p class="mini">Máximo 30 caracteres / Mínimo 2 caracteres</p>
+			</div>
+			<!-- PREGUNTA SECRETA -->
+			<!-- RESPUESTA SECRETA -->
+			<div class="form-group row">
+				<label class="col-sm-4 col-form-label" for="respuesta_secreta">
+					Respuesta secreta
+				</label>
+				<div onkeyup="letraMinuscula3()" class="col-sm-7">
+					<input class="form-control" id="respuesta_secreta" type="text" name="respuesta_secreta" required>
 				</div>
-				<!-- RESPUESTA SECRETA -->
-				<input class="btn btn-outline-primary btn-block" type="submit" name="boton_registrar" value="Registrar" .disabled><br>
-				<a class="btn btn-outline-info" role="button" .disabled href="login.php">Regresar</a>
-				
-			</form>
+				<p class="mini">Máximo 30 caracteres / Mínimo 2 caracteres</p>
+			</div>
+			<!-- RESPUESTA SECRETA -->
+			<input class="btn btn-outline-primary btn-block" type="submit" name="boton_registrar" value="Registrar" .disabled><br>
+			<a class="btn btn-outline-info" role="button" .disabled href="login.php">Regresar</a>
+
+		</form>
 	</div>
-</center>
 </body>
+
 </html>

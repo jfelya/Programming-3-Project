@@ -4,4 +4,3 @@ function sesionActiva() {
 		header("Location:mainpage.php");
 	} //SI NO HAY SESION O NO ES ADMIN
 }
-?>

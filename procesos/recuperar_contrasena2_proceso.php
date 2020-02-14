@@ -89,4 +89,3 @@ else
 				} //SI NO HAY RESULTADOS
 			} //SI TODO VA BIEN
 		}
-		?>

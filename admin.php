@@ -7,6 +7,7 @@ sesionInactiva();
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Página del Admin</title>
 	<meta charset="utf-8">
@@ -20,6 +21,7 @@ sesionInactiva();
 	<script src="javascript/SmoothScroll.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 	<div class="container-fluid">
 		<div class="row">
@@ -28,9 +30,9 @@ sesionInactiva();
 				<h1 class="title">Bienvenido al nivel de Administrador</h1>
 			</div>
 			<div class="col-sm-2">
-				<p id="usuario">Administrador: 
+				<p id="usuario">Administrador:
 					<span class="usertext">
-						<?php 
+						<?php
 						echo $_SESSION["usuario"];
 						?>
 					</span>
@@ -56,4 +58,5 @@ sesionInactiva();
 		</div>
 	</div>
 </body>
+
 </html>

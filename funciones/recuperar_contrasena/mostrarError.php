@@ -21,4 +21,3 @@ function mostrarError2() {
 		}
 	}
 }
-?>

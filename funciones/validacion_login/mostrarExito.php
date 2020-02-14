@@ -11,4 +11,3 @@ function mostrarExito() {
 	}
 	//EXITO CON LA CONTRASEÑA
 }
-?>

@@ -35,4 +35,3 @@ if (isset($_REQUEST["id_cliente"]))
 		header("Location:lista_de_usuarios.php");
 	}
 }
-?>

@@ -9,4 +9,3 @@ function mostrarError() {
 	} //SI NO HAY ERRORES
 } //SI LOS ERRORES ESTÁN PUESTOS
 }
-?>

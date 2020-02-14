@@ -13,4 +13,3 @@ $cambiarContrasena = isset($_SESSION["cambiar_contrasena"]) && $_SESSION["cambia
 // 		header("Location:cerrar_sesion.php");
 // 	}
 // }
-?>

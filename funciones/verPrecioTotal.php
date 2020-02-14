@@ -1,5 +1,6 @@
 <?php
-function calcularPrecioTotal() {
+function calcularPrecioTotal()
+{
 	if (isset($_SESSION["preciototal"]) || isset($_SESSION["precio"]) || isset($_SESSION["cantidad"])) {
 
 		unset($_SESSION["preciototal"]);
@@ -7,7 +8,7 @@ function calcularPrecioTotal() {
 		unset($_SESSION["cantidad"]);
 	}
 	if (isset($_SESSION["carrito"])) {
-		
+
 		$_SESSION["preciototal"] = 0;
 		foreach ($_SESSION["carrito"] as $posicion => $posicionvalor) {
 			$_SESSION["precio"] = 0;
@@ -23,13 +24,14 @@ function calcularPrecioTotal() {
 		}
 	}
 }
-function verPrecioTotal() {
+function verPrecioTotal()
+{
 	if (isset($_SESSION["preciototal"]) && $_SESSION["preciototal"] == 0) {
 		Location("procesos/vaciar_carrito.php");
 	} else {
-		?>
-		<?php echo "Precio Total: ".$_SESSION["preciototal"]; ?> <span style="color:#54678F;">bsS</span></td>
-		<?php
+?>
+		<?php echo "Precio Total: " . $_SESSION["preciototal"]; ?> <span style="color:#54678F;">bsS</span></td>
+<?php
 	}
 }
 ?>

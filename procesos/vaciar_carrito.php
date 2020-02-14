@@ -5,4 +5,3 @@ unset($_SESSION["preciototal"]);
 unset($_SESSION["precio"]);
 unset($_SESSION["cantidad"]);
 header("Location:../mainpage.php");
-?>

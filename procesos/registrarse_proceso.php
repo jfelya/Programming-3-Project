@@ -125,4 +125,3 @@ if ($row_prueba["usuario"])
 				//COMPROBACIÓN PRINCIPAL
 			} // SI LOS CAMPOS NO ESTAN VACÍOS
 		} // SI EL USUARIO NO EXISTE
-		?>

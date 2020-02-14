@@ -74,4 +74,3 @@ if (isset($_REQUEST["con"]))
 	{
 		header("Location:../cerrar_sesion.php");
 	}
-?>

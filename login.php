@@ -9,18 +9,19 @@ sesionActiva();
 ?>
 <!DOCTYPE html>
 <html>
+
 <head>
 	<title>Equipate Full Login</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/bootstrapguayuco.css">
-    <link rel="stylesheet" type="text/css" href="css/guayucostyles.css">
+	<link rel="stylesheet" type="text/css" href="css/guayucostyles.css">
 	<script src="javascript/SmoothScroll.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
+
 <body>
 	<div class="container-fluid">
 		<div class="row">
-			
 			<div class="col-sm-12">
 				<h1 class="title">Bienvenido a Equipate Full</h1>
 			</div>
@@ -62,4 +63,5 @@ sesionActiva();
 		</form>
 	</div>
 </body>
+
 </html>
