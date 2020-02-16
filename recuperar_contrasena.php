@@ -22,95 +22,149 @@ mostrarError2();
 
 <body>
     <?php
-	if ($puestoCliente && !$puestoRecuperar) {
-	?>
-    <div class="container-fluid">
-        <p class="title">Usuario a recuperar:<br>
-            <span class="usertext">
-                <?php
-					include("conexion.php");
-					$id_cliente = $_REQUEST["id_cliente"];
-					$sql = "SELECT * FROM usuarios WHERE id_cliente = '$id_cliente'";
-					$resultado = $conexion->query($sql);
-					$row = $resultado->fetch_assoc();
-					echo $row["usuario"];
-					?>
-            </span>
-        </p><br>
-        <form method="POST"
-            action="procesos/recuperar_contrasena_proceso.php?con=respuesta_secreta&id_cliente=<?php echo $id_cliente; ?>">
+    if ($puestoCliente && !$puestoRecuperar) {
+       ?>
+       <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <h2 class="title">Usuario a recuperar: <span class="usertext">
+                    <?php
+                    include("conexion.php");
+                    $id_cliente = $_REQUEST["id_cliente"];
+                    $sql = "SELECT * FROM usuarios WHERE id_cliente = '$id_cliente'";
+                    $resultado = $conexion->query($sql);
+                    $row = $resultado->fetch_assoc();
+                    echo $row["usuario"];
+                    ?>
+                </span></h2>
+            </div>
+            <div class="col-sm-1">
+                <a class="btn btn-outline-secondary" href="recuperar_contrasena.php"><</a>
+            </div>
+        </div><br>
+        <form method="POST" action="procesos/recuperar_contrasena_proceso.php?con=respuesta_secreta&id_cliente=<?php echo $id_cliente; ?>">
             <div class="form-group row">
+                <div class="col-sm-3"></div>
                 <label class="col-sm-3 col-form-label" for="respuesta_secreta">
                     <?php
-						echo $row["pregunta_secreta"];
-						?>
+                    echo $row["pregunta_secreta"];
+                    ?>
                 </label>
-                <div class="col-sm-8">
+                <div class="col-sm-3">
                     <input onkeyup="letraMinuscula3()" class="form-control" id="respuesta_secreta" type="text"
-                        name="respuesta_secreta" placeholder="Ingrese su respuesta secreta" autofocus="yes">
+                    name="respuesta_secreta" placeholder="Ingrese su respuesta secreta" autofocus="yes">
                 </div>
+                <div class="col-sm-3"></div>
             </div><br>
-            <input class="btn btn-outline-primary btn-block" type="submit" value="Enviar">
-            <a class="btn btn-outline-info btn-block" href="recuperar_contrasena.php">Regresar</a>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <input class="btn btn-outline-primary btn-block" type="submit" value="Enviar">
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
         </form>
     </div>
     <?php
 	} //SI EL ID DEL USUARIO ES CORRECTO
 	if ($puestoRecuperar && $recuperarUsuario && !$puestoCliente) {
-	?>
-    <div class="container-fluid">
-        <p class="title">Recuperar con usuario</p><br>
+       ?>
+       <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <h2 class="title">Recuperar con usuario</h2>
+            </div>
+            <div class="col-sm-1">
+                <a class="btn btn-outline-secondary" href="recuperar_contrasena.php"><</a>
+            </div>
+        </div><br>
         <form method="POST" action="procesos/recuperar_contrasena_proceso.php?con=usuario">
             <div class="form-group row">
+                <div class="col-sm-3"></div>
                 <label class="col-sm-3 col-form-label" for="usuario">
                     Usuario
                 </label>
-                <div class="col-sm-7">
+                <div class="col-sm-3">
                     <input onkeyup="letraMinuscula1()" class="form-control" id="usuario" type="text" name="usuario"
-                        placeholder="Ingrese su usuario" autofocus="yes">
+                    placeholder="Ingrese su usuario" autofocus="yes">
                 </div>
+                <div class="col-sm-3"></div>
             </div><br>
-            <input class="btn btn-outline-primary btn-block" type="submit" value="Enviar">
-            <a class="btn btn-outline-info btn-block" href="recuperar_contrasena.php">Regresar</a>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <input class="btn btn-outline-primary btn-block" type="submit" value="Enviar">
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
         </form>
     </div>
     <?php
-	}
-	if ($puestoRecuperar && $recuperarCorreo && !$puestoCliente) {
+}
+if ($puestoRecuperar && $recuperarCorreo && !$puestoCliente) {
 	?>
     <div class="container-fluid">
-        <p class="title">Recuperar con correo</p><br>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <h2 class="title">Recuperar con correo</h2>
+            </div>
+            <div class="col-sm-1">
+                <a class="btn btn-outline-secondary" href="recuperar_contrasena.php"><</a>
+            </div>
+        </div><br>
         <form method="POST" action="procesos/recuperar_contrasena_proceso.php?con=correo">
             <div class="form-group row">
+                <div class="col-sm-3"></div>
                 <label class="col-sm-3 col-form-label" for="correo">
                     Correo
                 </label>
-                <div class="col-sm-7">
+                <div class="col-sm-3">
                     <input onkeyup="letraMinuscula2()" class="form-control" id="correo" type="correo" name="correo"
-                        placeholder="Ingrese su correo" autofocus="yes">
+                    placeholder="Ingrese su correo" autofocus="yes">
                 </div>
+                <div class="col-sm-3"></div>
             </div><br>
-            <input class="btn btn-outline-primary btn-block" type="submit" value="Enviar">
-            <a class="btn btn-outline-info btn-block" href="recuperar_contrasena.php">Regresar</a>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <input class="btn btn-outline-primary btn-block" type="submit" value="Enviar">
+                </div>
+                <div class="col-sm-3"></div>
+            </div>
         </form>
     </div>
     <?php
-	}
-	if (!$puestoCliente && !$puestoRecuperar) {
+}
+if (!$puestoCliente && !$puestoRecuperar) {
 	?>
     <div class="container-fluid">
-        <p class="title">Recuperación de Contraseña</p><br>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <h2 class="title">Recuperaración de contraseña</h2>
+            </div>
+            <div class="col-sm-1">
+                <a class="btn btn-outline-secondary" href="login.php"><</a>
+            </div>
+        </div><br>
 
-        <a class="btn btn-outline-secondary btn-block" href="recuperar_contrasena.php?recuperar=usuario">Recuperar con
-            usuario</a>
-        <a class="btn btn-outline-secondary btn-block" href="recuperar_contrasena.php?recuperar=correo">Recuperar con
-            correo</a>
-        <a class="btn btn-outline-info btn-block" data-toggle="tooltip" data-placement="top" title="Regresar"
-            href="login.php">Regresar</a>
+        <div class="row">
+            <div class="col-sm-4"></div>
+            <div class="col-sm-2">
+                <a class="btn btn-outline-primary btn-block" href="recuperar_contrasena.php?recuperar=usuario">Con usuario</a>
+            </div>
+            <div class="col-sm-2">
+                <a class="btn btn-outline-primary btn-block" href="recuperar_contrasena.php?recuperar=correo">Con correo</a>
+            </div>
+            <div class="col-sm-4"></div>
+        </div>
     </div>
     <?php
-	}
-	?>
+}
+?>
 </body>
 
 </html>

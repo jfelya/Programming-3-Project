@@ -19,11 +19,11 @@ html{
     background-color: #212624;
     height: auto;
     opacity: 0.98;
-    padding: 40px;
+    padding: 30px;
     border-radius: 20px;
     text-align: center;
   }
-  #cliente, #usuario {
+  #cliente, #usuarioSesion {
     color: silver;
     text-align: right;
   }

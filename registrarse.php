@@ -18,97 +18,124 @@ sesionActiva();
     <script src="javascript/SmoothScroll.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
-
 <body>
     <div class="container-fluid">
-        <p class="title">Registrarse por primera vez</p>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <h2 class="title">Registrarse por primera vez</h2>
+            </div>
+            <div class="col-sm-1">
+                <a class="btn btn-outline-secondary btn-block" href="login.php"><</a>
+            </div>
+        </div><br>
         <form name="registrarse" action="procesos/registrarse_proceso.php" method="POST">
             <!-- NOMBRE -->
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="nombre">
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3 col-form-label" for="nombre">
                     Nombre
                 </label>
-                <div class="col-sm-7">
+                <div class="col-sm-3">
                     <input class="form-control" id="nombre" type="text" name="nombre" required>
                 </div>
-                <p class="mini">Máximo 30 caracteres / Mínimo 2 caracteres</p>
+                <div class="col-sm-3"></div>
             </div>
-            <!-- NOMBRE -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="mini">Máximo 30 caracteres / Mínimo 2 caracteres</p>
+                </div>
+            </div>
             <!-- APELLIDO -->
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="apellido">
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3 col-form-label" for="apellido">
                     Apellido
                 </label>
-                <div class="col-sm-7">
+                <div class="col-sm-3">
                     <input class="form-control" id="apellido" type="text" name="apellido" required>
                 </div>
-                <p class="mini">Máximo 30 caracteres / Mínimo 2 caracteres</p>
+                <div class="col-sm-3"></div>
             </div>
-            <!-- APELLIDO -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="mini">Máximo 30 caracteres / Mínimo 2 caracteres</p>
+                </div>
+            </div>
             <!-- USUARIO -->
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="usuario">
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3 col-form-label" for="usuario">
                     Usuario
                 </label>
-                <div class="col-sm-7">
+                <div class="col-sm-3">
                     <input onkeyup="letraMinuscula1()" class="form-control" id="usuario" type="text" name="usuario"
-                        required>
+                    required>
                 </div>
-                <p class="mini">Máximo 20 caracteres / Mínimo 4 caracteres</p>
+                <div class="col-sm-3"></div>
+                
             </div>
-            <!-- USUARIO -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="mini">Máximo 20 caracteres / Mínimo 4 caracteres</p>
+                </div>
+            </div>
             <!-- CORREO -->
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="correo">
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3 col-form-label" for="correo">
                     Correo
                 </label>
-                <div class="col-sm-7">
+                <div class="col-sm-3">
                     <input onkeyup="letraMinuscula2()" class="form-control" id="correo" type="correo" name="correo"
-                        required>
+                    required>
                 </div>
-                <p class="mini">Máximo 30 caracteres</p>
+                <div class="col-sm-3"></div>
             </div>
-            <!-- CORREO -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="mini">Máximo 30 caracteres</p>
+                </div>
+            </div>
             <!-- CONTRASEÑA -->
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="contrasena">
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3 col-form-label" for="contrasena">
                     Contraseña
                 </label>
-                <div class="col-sm-7">
+                <div class="col-sm-3">
                     <input class="form-control" id="contrasena" type="password" name="contrasena" required>
                 </div>
-                <p class="mini">Máximo 30 caracteres / Mínimo 4 caracteres</p>
+                <div class="col-sm-3"></div>
             </div>
-            <!-- CONTRASEÑA -->
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="mini">Máximo 30 caracteres / Mínimo 4 caracteres</p>
+                </div>
+            </div>
             <!-- CONFIRMAR CONTRASEÑA -->
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="contrasena2">
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3 col-form-label" for="contrasena2">
                     Confirmar contraseña
                 </label>
-                <div class="col-sm-7">
+                <div class="col-sm-3">
                     <input class="form-control" id="contrasena2" type="password" name="contrasena2" required>
                 </div>
-                <p class="mini">Máximo 30 caracteres / Mínimo 4 caracteres</p>
+                <div class="col-sm-3"></div>
             </div>
-            <!-- CONFIRMAR CONTRASEÑA -->
-            <!-- NIVEL  -->
-            <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="nivel">
-                    Nivel de Usuario
-                </label>
-                <div class="col-sm-7">
-                    <select class="form-control" name="nivel" id="nivel">
-                        <option>Cliente</option>
-                    </select>
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="mini">Máximo 30 caracteres / Mínimo 4 caracteres</p>
                 </div>
             </div>
-            <!-- NIVEL  -->
             <!-- PREGUNTA SECRETA -->
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="pregunta_secreta">
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3 col-form-label" for="pregunta_secreta">
                     Pregunta secreta
                 </label>
-                <div class="col-sm-7">
+                <div class="col-sm-3">
                     <select class="form-control" name="pregunta_secreta" id="pregunta_secreta">
                         <option></option>
                         <option>Color Favorito</option>
@@ -117,25 +144,35 @@ sesionActiva();
                         <option>Animal Favorito</option>
                     </select>
                 </div>
+                <div class="col-sm-3"></div>
             </div>
-            <!-- PREGUNTA SECRETA -->
+            <div class="row">
+                <div class="col-sm-12"></div>
+            </div>
             <!-- RESPUESTA SECRETA -->
             <div class="form-group row">
-                <label class="col-sm-4 col-form-label" for="respuesta_secreta">
+                <div class="col-sm-3"></div>
+                <label class="col-sm-3 col-form-label" for="respuesta_secreta">
                     Respuesta secreta
                 </label>
-                <div onkeyup="letraMinuscula3()" class="col-sm-7">
+                <div onkeyup="letraMinuscula3()" class="col-sm-3">
                     <input class="form-control" id="respuesta_secreta" type="text" name="respuesta_secreta" required>
                 </div>
-                <p class="mini">Máximo 30 caracteres / Mínimo 2 caracteres</p>
+                <div class="col-sm-3"></div>
             </div>
-            <!-- RESPUESTA SECRETA -->
-            <input class="btn btn-outline-primary btn-block" type="submit" name="boton_registrar" value="Registrar"
-                .disabled><br>
-            <a class="btn btn-outline-info" role="button" .disabled href="login.php">Regresar</a>
-
+            <div class="row">
+                <div class="col-sm-12">
+                    <p class="mini">Máximo 30 caracteres / Mínimo 2 caracteres</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-6">
+                    <input class="btn btn-outline-primary btn-block" type="submit" name="boton_registrar" value="Registrar" .disabled>
+                    <div class="col-sm-3"></div>
+                </div>
+            </div>
         </form>
     </div>
 </body>
-
 </html>

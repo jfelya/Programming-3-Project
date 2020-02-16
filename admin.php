@@ -30,7 +30,7 @@ sesionInactiva();
                 <h1 class="title">Bienvenido al nivel de Administrador</h1>
             </div>
             <div class="col-sm-2">
-                <p id="usuario">Administrador:
+                <p id="usuarioSesion">Administrador:
                     <span class="usertext">
                         <?php
 						echo $_SESSION["usuario"];
