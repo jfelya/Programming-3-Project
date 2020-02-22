@@ -26,7 +26,7 @@ mostrarErrorExito();
             </div>
             <div class="col-sm-1">
                 <a class="btn btn-outline-secondary" href="admin-producto.php">
-                    << /a>
+                    <</a>
             </div>
         </div> <br><br>
         <div class="row">
@@ -48,8 +48,8 @@ mostrarErrorExito();
                             </th>
                         </tr>
                         <?php
-										mostrarProductos();
-										?>
+                            mostrarProductos();
+						?>
                     </tbody>
                 </table>
             </div>
