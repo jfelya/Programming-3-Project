@@ -16,7 +16,6 @@ mostrarError2();
     <link rel="stylesheet" type="text/css" href="css/bootstrapguayuco.css">
     <link rel="stylesheet" type="text/css" href="css/guayucostyles.css">
     <script src="javascript/letras_minusculas_recuperar_contrasena.js"></script>
-    <script src="javascript/SmoothScroll.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 

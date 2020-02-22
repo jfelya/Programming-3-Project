@@ -13,12 +13,9 @@ sesionInactiva();
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrapguayuco.css">
     <link rel="stylesheet" type="text/css" href="css/guayucostyles.css">
-    <script src="javascript/validacion_registro_usuario.js"></script>
-    <script src="javascript/validacion_modificacion_usuario.js"></script>
     <script src="javascript/validacion_registro_producto.js"></script>
     <script src="javascript/validacion_modificacion_producto.js"></script>
     <script src="javascript/letras_minusculas.js"></script>
-    <script src="javascript/SmoothScroll.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 

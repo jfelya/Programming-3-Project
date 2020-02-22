@@ -15,7 +15,6 @@ sesionActiva();
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrapguayuco.css">
     <link rel="stylesheet" type="text/css" href="css/guayucostyles.css">
-    <script src="javascript/SmoothScroll.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
@@ -69,8 +68,7 @@ sesionActiva();
                     Usuario
                 </label>
                 <div class="col-sm-3">
-                    <input onkeyup="letraMinuscula1()" class="form-control" id="usuario" type="text" name="usuario"
-                    required>
+                    <input class="form-control" id="usuario" type="text" name="usuario" required onkeyup="this.value = this.value.toLowerCase();">
                 </div>
                 <div class="col-sm-3"></div>
                 
@@ -87,8 +85,7 @@ sesionActiva();
                     Correo
                 </label>
                 <div class="col-sm-3">
-                    <input onkeyup="letraMinuscula2()" class="form-control" id="correo" type="correo" name="correo"
-                    required>
+                    <input class="form-control" id="correo" type="email" name="correo" required>
                 </div>
                 <div class="col-sm-3"></div>
             </div>
@@ -155,8 +152,8 @@ sesionActiva();
                 <label class="col-sm-3 col-form-label" for="respuesta_secreta">
                     Respuesta secreta
                 </label>
-                <div onkeyup="letraMinuscula3()" class="col-sm-3">
-                    <input class="form-control" id="respuesta_secreta" type="text" name="respuesta_secreta" required>
+                <div class="col-sm-3">
+                    <input class="form-control" id="respuesta_secreta" type="text" name="respuesta_secreta" required onkeyup="this.value = this.value.toLowerCase();">
                 </div>
                 <div class="col-sm-3"></div>
             </div>

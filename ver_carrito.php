@@ -13,7 +13,6 @@ include("funciones/verPrecioTotal.php");
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="css/bootstrapguayuco.css">
     <link rel="stylesheet" type="text/css" href="css/guayucostyles.css">
-    <script src="javascript/SmoothScroll.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 

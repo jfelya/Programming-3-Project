@@ -15,18 +15,26 @@ sesionActiva();
 	<meta charset="utf-8">
 	<link rel="stylesheet" type="text/css" href="css/bootstrapguayuco.css">
 	<link rel="stylesheet" type="text/css" href="css/guayucostyles.css">
-	<script src="javascript/SmoothScroll.min.js"></script>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="javascript/formLogin.js"></script>
 </head>
 
 <body>
+	<!-- <form action="background1.jpg" class="main-form" method="POST" name="formLogin" onsubmit="return formLoginCheck();">
+		User
+		<input id="usuario" type="text" name="usuario" autofocus="yes"><br><br>
+		Password
+		<input id="contrasena" type="password" id="contrasena"><br><br>
+		<input type="submit" value="Send">
+	</form> -->
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-sm-12">
 				<h1 class="title">Bienvenido a Equipate Full</h1>
 			</div>
 		</div><br><br>
-		<form action="procesos/login_proceso.php" method="post">
+
+		<form action="procesos/login_proceso.php" class="main-form" method="POST" name="formLogin" onsubmit="return formLoginCheck();">
 			<div class="form-group row">
 				<div class="col-sm-3"></div>
 				<label class="col-sm-3 col-form-label" for="usuario">Usuario

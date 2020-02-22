@@ -15,10 +15,6 @@ sesionInactiva();
     <link rel="stylesheet" type="text/css" href="css/guayucostyles.css">
     <script src="javascript/validacion_registro_usuario.js"></script>
     <script src="javascript/validacion_modificacion_usuario.js"></script>
-    <script src="javascript/validacion_registro_producto.js"></script>
-    <script src="javascript/validacion_modificacion_producto.js"></script>
-    <script src="javascript/letras_minusculas.js"></script>
-    <script src="javascript/SmoothScroll.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
@@ -37,8 +33,9 @@ sesionInactiva();
                     <</a>
                 </div>
             </div><br><br>
-            <form name="registro_usuario" action="procesos/admin_proceso.php" method="POST"
-            onsubmit="return validacion_registro_usuario()">
+
+            <form name="regUser" action="procesos/admin_proceso.php" method="POST"
+            onsubmit="return validacion_registro_usuario();">
             <!-- NOMBRE -->
             <div class="form-group row">
                 <div class="col-sm-3"></div>
@@ -78,8 +75,8 @@ sesionInactiva();
                     Usuario
                 </label>
                 <div class="col-sm-3">
-                    <input onkeyup="letraMinuscula1()" class="form-control" id="usuarioF" type="text" name="usuario"
-                    required>
+                    <input class="form-control" id="usuarioF" type="text" name="usuario"
+                    required onkeyup="this.value = this.value.toLowerCase();">
                 </div>
                 <div class="col-sm-3"></div>
             </div>
@@ -95,7 +92,7 @@ sesionInactiva();
                     Correo
                 </label>
                 <div class="col-sm-3">
-                    <input onkeyup="letraMinuscula2()" class="form-control" id="correo" type="correo" name="correo"
+                    <input class="form-control" id="correo" type="correo" name="correo"
                     required>
                 </div>
                 <div class="col-sm-3"></div>
@@ -175,8 +172,8 @@ sesionInactiva();
                 <label class="col-sm-3 col-form-label" for="respuesta_secreta">
                     Respuesta secreta
                 </label>
-                <div onkeyup="letraMinuscula3()" class="col-sm-3">
-                    <input class="form-control" id="respuesta_secreta" type="text" name="respuesta_secreta" required>
+                <div class="col-sm-3">
+                    <input class="form-control" id="respuesta_secreta" type="text" name="respuesta_secreta" required onkeyup="this.value = this.value.toLowerCase();">
                 </div>
                 <div class="col-sm-3"></div>
             </div>
@@ -200,9 +197,7 @@ sesionInactiva();
         </form>
     </div>
     <?php
-}
-		//SI SE ELIGE LA FUNCIÓN DE MODIFICAR USUARIOS
-else {
+} else {
   $id_cliente = $_REQUEST['id_cliente'];
   include("conexion.php");
   $query = "SELECT * FROM usuarios WHERE id_cliente = '$id_cliente'";
@@ -220,7 +215,8 @@ else {
                 <</a>
             </div>
         </div><br><br>
-        <form name="modificacion_usuario"
+
+        <form name="modUser"
         action="procesos/admin_proceso.php?modificar=1&id_cliente=<?php echo $id_cliente; ?>" method="POST"
         onsubmit="return validacion_modificacion_usuario()">
         <!-- NOMBRE -->
@@ -256,8 +252,8 @@ else {
                 Usuario
             </label>
             <div class="col-sm-3">
-                <input onkeyup="letraMinuscula1()" class="form-control" id="usuarioF" type="text" name="usuario"
-                value="<?php echo $row['usuario']; ?>" required>
+                <input class="form-control" id="usuarioFR" type="text" name="usuario"
+                value="<?php echo $row['usuario']; ?>" required onkeyup="this.value = this.value.toLowerCase();">
             </div>
             <div class="col-sm-3"></div>
         </div>
@@ -269,7 +265,7 @@ else {
                 Correo
             </label>
             <div class="col-sm-3">
-                <input onkeyup="letraMinuscula2()" class="form-control" id="correo" type="correo" name="correo"
+                <input class="form-control" id="correo" type="correo" name="correo"
                 value="<?php echo $row['correo']; ?>" required>
             </div>
             <div class="col-sm-3"></div>
@@ -389,7 +385,7 @@ else {
             </label>
             <div class="col-sm-3">
                 <input class="form-control" id="respuesta_secreta" type="text" name="respuesta_secreta"
-                value="<?php echo $row['respuesta_secreta']; ?>" required onkeyup="letraMinuscula3()">
+                value="<?php echo $row['respuesta_secreta']; ?>" required onkeyup="this.value = this.value.toLowerCase();">
             </div>
             <div class="col-sm-3"></div>
         </div>
@@ -407,6 +403,7 @@ else {
 <?php
 }
 ?>
+<script src="javascript/lowerCase.js"></script>
 </body>
 
 </html>

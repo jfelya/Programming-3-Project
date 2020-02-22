@@ -13,7 +13,6 @@ mostrarErrorExito();
     <meta charset="utf-8">
     <link rel="stylesheet" href="css/bootstrapguayuco.css">
     <link rel="stylesheet" href="css/guayucostyles.css">
-    <script src="javascript/SmoothScroll.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
