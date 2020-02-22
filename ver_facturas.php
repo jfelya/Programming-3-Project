@@ -22,18 +22,18 @@ include("funciones/verFacturas.php");
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
                 <h2 class="title">Facturas de: <span class="usertext">
-                        <?php echo $_SESSION["usuario"]; ?>
-                    </span></h2>
+                    <?php echo $_SESSION["usuario"]; ?>
+                </span></h2>
             </div>
             <div class="col-sm-1">
                 <a class="btn btn-outline-secondary btn-block" href="mainpage.php">
-                    << /a>
-            </div>
-        </div> <br>
-        <?php
-						verFacturas();
-						?>
-    </div>
-</body>
+                    <</a>
+                </div>
+            </div> <br>
+            <?php
+            verFacturas();
+            ?>
+        </div>
+    </body>
 
-</html>
+    </html>

@@ -33,8 +33,8 @@ sesionInactiva();
                 <p id="usuarioSesion">Administrador:
                     <span class="usertext">
                         <?php
-						echo $_SESSION["usuario"];
-						?>
+                        echo $_SESSION["usuario"];
+                        ?>
                     </span>
                 </p>
             </div>
@@ -43,11 +43,11 @@ sesionInactiva();
             <div class="col-sm-3"></div>
             <div class="col-sm-3">
                 <a class="btn btn-outline-primary btn-block" role="button" .disabled href="admin-usuario.php">Registrar
-                    Usuario</a>
+                Usuario</a>
             </div>
             <div class="col-sm-3">
                 <a class="btn btn-outline-primary btn-block" role="button" .disabled href="admin-producto.php">Registrar
-                    Producto</a><br>
+                Producto</a><br>
             </div>
             <div class="col-sm-3"></div>
         </div>

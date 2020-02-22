@@ -30,7 +30,7 @@ include("funciones/verPrecioTotal.php");
             </div>
             <div class="col-sm-1">
                 <a class="btn btn-outline-secondary btn-block" href="mainpage.php">
-                    << /a>
+                    <</a>
             </div>
         </div> <br>
         <?php

@@ -26,41 +26,41 @@ mostrarErrorExito();
             </div>
             <div class="col-sm-1">
                 <a class="btn btn-outline-secondary" href="admin-usuario.php">
-                    << /a>
-            </div>
-        </div> <br><br>
-        <div class="row">
-            <div class="col-sm-12">
-                <table class="table table-dark table-hover">
-                    <tbody style="color: silver;">
-                        <tr>
-                            <th class="tabletitle">
-                                Nombre
-                            </th>
-                            <th class="tabletitle">
-                                Usuario
-                            </th>
-                            <th class="tabletitle">
-                                Nivel
-                            </th>
-                            <th class="tabletitle">
-                                Pregunta Secreta
-                            </th>
-                            <th class="tabletitle">
-                                Respuesta Secreta
-                            </th>
-                            <th class="tabletitle" colspan="2">
-                                Modificaciones
-                            </th>
-                        </tr>
-                        <?php
-										mostrarUsuarios();
-										?>
-                    </tbody>
-                </table>
+                    <</a>
+                </div>
+            </div> <br><br>
+            <div class="row">
+                <div class="col-sm-12">
+                    <table class="table table-dark table-hover">
+                        <tbody style="color: silver;">
+                            <tr>
+                                <th class="tabletitle">
+                                    Nombre
+                                </th>
+                                <th class="tabletitle">
+                                    Usuario
+                                </th>
+                                <th class="tabletitle">
+                                    Nivel
+                                </th>
+                                <th class="tabletitle">
+                                    Pregunta Secreta
+                                </th>
+                                <th class="tabletitle">
+                                    Respuesta Secreta
+                                </th>
+                                <th class="tabletitle" colspan="2">
+                                    Modificaciones
+                                </th>
+                            </tr>
+                            <?php
+                            mostrarUsuarios();
+                            ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 
-</html>
+    </html>

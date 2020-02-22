@@ -23,8 +23,8 @@ mostrarError2();
 <body>
     <?php
     if ($puestoCliente && !$puestoRecuperar) {
-       ?>
-       <div class="container-fluid">
+     ?>
+     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
@@ -69,8 +69,8 @@ mostrarError2();
     <?php
 	} //SI EL ID DEL USUARIO ES CORRECTO
 	if ($puestoRecuperar && $recuperarUsuario && !$puestoCliente) {
-       ?>
-       <div class="container-fluid">
+     ?>
+     <div class="container-fluid">
         <div class="row">
             <div class="col-sm-1"></div>
             <div class="col-sm-10">
