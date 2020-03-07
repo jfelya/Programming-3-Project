@@ -1,9 +1,10 @@
 <?php
-function verCarrito()
-{
+function verCarrito() {
+
 	foreach ($_SESSION["carrito"] as $posicion => $posicionvalor) {
 		echo "<tr>";
-?>
+		?>
+		
 		<td>
 			<?php
 			echo $posicionvalor["nombre"];
@@ -22,7 +23,8 @@ function verCarrito()
 		<td>
 			<a class="btn btn-outline-warning" href="procesos/carrito.php?menosuno&posicion=<?php echo $posicion; ?>">-1</a>
 		</td>
-<?php
+
+		<?php
 		echo "</tr>";
 	}
 }

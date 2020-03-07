@@ -41,7 +41,7 @@ $row = $resultado->fetch_assoc();
                 </span></h2>
             </div>
             <div class="col-sm-1">
-                <a class="btn btn-outline-secondary" href="recuperar_contrasena.php"><</a>
+                <a class="btn btn-outline-secondary  btn-block" href="recuperar_contrasena.php"><</a>
             </div>
         </div><br>
         <form method="POST" action="procesos/recuperar_contrasena2_proceso.php?id_cliente=<?php echo $id_cliente; ?>">

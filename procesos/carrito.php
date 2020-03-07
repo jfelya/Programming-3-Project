@@ -1,61 +1,108 @@
 <?php
+
 session_start();
+
 include("../funciones/sesionInactiva.php");
+
 sesionInactiva();
+
 include("../conexion.php");
-if (isset($_REQUEST["agregar"]) && isset($_REQUEST["id_producto"])) {
+
+if (isset($_REQUEST["agregar"]) 
+	&& isset($_REQUEST["id_producto"])) 
+{
+	
 	$id_producto = $_REQUEST['id_producto'];
+
 	$query = "SELECT * FROM producto WHERE id_producto = $id_producto";
+
 	$resultado = $conexion->query($query);
+
 	$producto = $resultado->fetch_assoc();
 
-	if (isset($_SESSION["carrito"])) {
-		for ($i=0; $i < 5; $i++) {
-			if ($producto["nombre"] == $_SESSION["carrito"][$i]["nombre"] && $_SESSION["carrito"][$i]["cantidad"] > 0) {
+	if (isset($_SESSION["carrito"])) 
+	{
 
-				if ($_SESSION["carrito"][$i]["cantidad"] == $producto["stock"]) {
+		for ($i=0; $i < 5; $i++) 
+		{
+
+			if ($producto["nombre"] == $_SESSION["carrito"][$i]["nombre"] 
+				&& $_SESSION["carrito"][$i]["cantidad"] > 0) 
+			{
+
+				if ($_SESSION["carrito"][$i]["cantidad"] == $producto["stock"]) 
+				{
+
 					$_SESSION["carrito"][$i]["cantidad"] = $producto["stock"];
 					break;
-				} else {
+
+				} 
+
+				else 
+				{
 
 					$_SESSION["carrito"][$i]["cantidad"] += 1;
 					break;
+
 				}
 
-			} elseif ($_SESSION["carrito"][$i]["nombre"] == "") {
+			} 
+			elseif ($_SESSION["carrito"][$i]["nombre"] == "") 
+			{
 
 				$_SESSION["carrito"][$i] = Array (
 					"nombre" => $producto["nombre"],
 					"precio" => $producto["precio"],
 					"cantidad" => 1);
 				break;
+
 			}
+
 		}
-	} else {
-		$_SESSION["carrito"][0] = Array (
+
+	} 
+
+	else 
+	{
+
+		$_SESSION["carrito"][0] = 
+		Array (
 			"nombre" => $producto["nombre"],
 			"precio" => $producto["precio"],
-			"cantidad" => 1);
-	}
-	header("Location:../ver_carrito.php");
-} 
-//BOTÓN AGREGAR
+			"cantidad" => 1
+		);
 
-if (isset($_REQUEST["menosuno"]) && isset($_REQUEST["posicion"]) &&	isset($_SESSION["carrito"])) {
+	}
+
+	header("
+		Location:../ver_carrito.php
+		");
+}
+
+if (isset($_REQUEST["menosuno"]) 
+	&& isset($_REQUEST["posicion"]) 
+	&& isset($_SESSION["carrito"])) 
+{
 
 	$posicion = $_REQUEST["posicion"];
 
-	if ($_SESSION["carrito"][$posicion]["cantidad"] <= 1) {
+	if ($_SESSION["carrito"][$posicion]["cantidad"] <= 1) 
+	{
 
 		unset($_SESSION["carrito"][$posicion]);
 		array_values($_SESSION["carrito"]);
 
-	} else {
+	} 
+	else
+	{
 
 		$_SESSION["carrito"][$posicion]["cantidad"] -= 1;
 
 	}
-	header("Location:../ver_carrito.php");	
+
+	header("
+		Location:../ver_carrito.php
+		");	
 } 
-// BOTON MENOSUNO
+
 ?>

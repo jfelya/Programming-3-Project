@@ -24,7 +24,7 @@ mostrarErrorExito();
                 <h2 class="title">Lista de usuarios</h2>
             </div>
             <div class="col-sm-1">
-                <a class="btn btn-outline-secondary" href="admin-usuario.php">
+                <a class="btn btn-outline-secondary btn-block" href="admin-usuario.php">
                     <</a>
                 </div>
             </div> <br><br>

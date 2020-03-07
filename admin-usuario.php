@@ -20,7 +20,9 @@ sesionInactiva();
 
 <body>
     <?php
-    if (!isset($_REQUEST["modificar_usuario"]) and !isset($_REQUEST["id_cliente"])) {
+    if (!isset($_REQUEST["modificar_usuario"]) 
+        and !isset($_REQUEST["id_cliente"]))
+    {
       ?>
       <div class="container-fluid">
         <div class="row">
@@ -29,7 +31,7 @@ sesionInactiva();
                 <h2 class="title">Registro de Usuarios</h2>
             </div>
             <div class="col-sm-1">
-                <a class="btn btn-outline-secondary" href="admin.php">
+                <a class="btn btn-outline-secondary btn-block" href="admin.php">
                     <</a>
                 </div>
             </div><br><br>
@@ -197,13 +199,16 @@ sesionInactiva();
         </form>
     </div>
     <?php
-} else {
+} 
+else 
+{
   $id_cliente = $_REQUEST['id_cliente'];
   include("conexion.php");
   $query = "SELECT * FROM usuarios WHERE id_cliente = '$id_cliente'";
   $resultado = $conexion->query($query);
   $row = $resultado->fetch_assoc();
   ?>
+
   <div class="container-fluid">
     <div class="row">
         <div class="col-sm-1"></div>
@@ -211,7 +216,7 @@ sesionInactiva();
             <h2 class="title">Modificar Usuario</h2>
         </div>
         <div class="col-sm-1">
-            <a class="btn btn-outline-secondary" href="lista_de_usuarios.php">
+            <a class="btn btn-outline-secondary btn-block" href="lista_de_usuarios.php">
                 <</a>
             </div>
         </div><br><br>
@@ -305,6 +310,7 @@ sesionInactiva();
             </label>
             <div class="col-sm-3">
                 <select class="form-control" name="nivel" id="nivel">
+
                     <?php
                     if ($row["nivel"] == "cliente")
                     {
@@ -321,6 +327,7 @@ sesionInactiva();
                         <?php
                     }
                     ?>
+
                 </select>
             </div>
             <div class="col-sm-3"></div>
@@ -333,6 +340,7 @@ sesionInactiva();
             </label>
             <div class="col-sm-3">
                 <select class="form-control" name="pregunta_secreta" id="pregunta_secreta">
+
                     <?php
                     if ($row["pregunta_secreta"] == "Color Favorito")
                     {
@@ -373,6 +381,7 @@ sesionInactiva();
                         <?php
                     }
                     ?>
+                    
                 </select>
             </div>
             <div class="col-sm-3"></div>

@@ -32,7 +32,7 @@ sesionInactiva();
                 <h2 class="title">Registro de Productos</h2>
             </div>
             <div class="col-sm-1">
-                <a class="btn btn-outline-secondary" href="admin.php">
+                <a class="btn btn-outline-secondary btn-block" href="admin.php">
                     <</a>
                 </div>
             </div><br><br>
@@ -92,7 +92,8 @@ sesionInactiva();
     <?php
 }
 	//SI SE ELIGE LA FUNCIÓN DE MODIFICAR PRODUCTOS
-else {
+else 
+{
   $id_producto = $_REQUEST['id_producto'];
   include("conexion.php");
   $query = "SELECT * FROM producto WHERE id_producto = '$id_producto'";
@@ -106,7 +107,7 @@ else {
             <h2 class="title">Modificación de Productos</h2>
         </div>
         <div class="col-sm-1">
-            <a class="btn btn-outline-secondary" href="lista_de_productos.php">
+            <a class="btn btn-outline-secondary btn-block" href="lista_de_productos.php">
                 <</a>
             </div>
         </div><br><br>

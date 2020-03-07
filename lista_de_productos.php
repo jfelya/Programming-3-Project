@@ -24,7 +24,7 @@ mostrarErrorExito();
                 <h2 class="title">Registro de Productos</h2>
             </div>
             <div class="col-sm-1">
-                <a class="btn btn-outline-secondary" href="admin-producto.php">
+                <a class="btn btn-outline-secondary btn-block" href="admin-producto.php">
                     <</a>
                 </div>
             </div> <br><br>

@@ -5,10 +5,22 @@ include("funciones/verFacturaDetallado.php");
 sesionInactiva();
 
 //Validacion de la compra
-if (isset($_REQUEST["exito"])) {
+if (isset($_REQUEST["exito"]))
+{
+
 	echo "<script>alert('Su compra se ha realizado con exito')</script>";
-} //Validacion de la compra
-if (isset($_REQUEST["id_factura"]) && $_REQUEST["id_factura"] !== "") {
+
+}
+
+if (isset($_REQUEST["id_factura"]) 
+    && $_REQUEST["id_factura"] !== "")
+{
+    header("
+        Location:mainpage.php
+        ");
+}
+else
+{
     ?>
     <!DOCTYPE html>
     <html>
@@ -46,7 +58,5 @@ if (isset($_REQUEST["id_factura"]) && $_REQUEST["id_factura"] !== "") {
 
         </html>
         <?php
-    } else {
-     header("Location:mainpage.php");
- }
- ?>
+    }
+    ?>

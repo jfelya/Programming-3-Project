@@ -21,7 +21,8 @@ mostrarError2();
 
 <body>
     <?php
-    if ($puestoCliente && !$puestoRecuperar) {
+    if ($puestoCliente && !$puestoRecuperar)
+    {
      ?>
      <div class="container-fluid">
         <div class="row">
@@ -39,9 +40,10 @@ mostrarError2();
                 </span></h2>
             </div>
             <div class="col-sm-1">
-                <a class="btn btn-outline-secondary" href="recuperar_contrasena.php"><</a>
+                <a class="btn btn-outline-secondary btn-block" href="recuperar_contrasena.php"><</a>
             </div>
         </div><br>
+
         <form method="POST" action="procesos/recuperar_contrasena_proceso.php?con=respuesta_secreta&id_cliente=<?php echo $id_cliente; ?>">
             <div class="form-group row">
                 <div class="col-sm-3"></div>
@@ -66,43 +68,50 @@ mostrarError2();
         </form>
     </div>
     <?php
-	} //SI EL ID DEL USUARIO ES CORRECTO
-	if ($puestoRecuperar && $recuperarUsuario && !$puestoCliente) {
-     ?>
-     <div class="container-fluid">
-        <div class="row">
-            <div class="col-sm-1"></div>
-            <div class="col-sm-10">
-                <h2 class="title">Recuperar con usuario</h2>
-            </div>
-            <div class="col-sm-1">
-                <a class="btn btn-outline-secondary" href="recuperar_contrasena.php"><</a>
-            </div>
-        </div><br>
-        <form method="POST" action="procesos/recuperar_contrasena_proceso.php?con=usuario">
-            <div class="form-group row">
-                <div class="col-sm-3"></div>
-                <label class="col-sm-3 col-form-label" for="usuario">
-                    Usuario
-                </label>
-                <div class="col-sm-3">
-                    <input onkeyup="letraMinuscula1()" class="form-control" id="usuario" type="text" name="usuario"
-                    placeholder="Ingrese su usuario" autofocus="yes">
-                </div>
-                <div class="col-sm-3"></div>
-            </div><br>
-            <div class="row">
-                <div class="col-sm-3"></div>
-                <div class="col-sm-6">
-                    <input class="btn btn-outline-primary btn-block" type="submit" value="Enviar">
-                </div>
-                <div class="col-sm-3"></div>
-            </div>
-        </form>
-    </div>
-    <?php
 }
-if ($puestoRecuperar && $recuperarCorreo && !$puestoCliente) {
+if ($puestoRecuperar 
+    && $recuperarUsuario 
+    && !$puestoCliente)
+{
+ ?>
+ <div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-10">
+            <h2 class="title">Recuperar con usuario</h2>
+        </div>
+        <div class="col-sm-1">
+            <a class="btn btn-outline-secondary btn-block" href="recuperar_contrasena.php"><</a>
+        </div>
+    </div><br>
+    <form method="POST" action="procesos/recuperar_contrasena_proceso.php?con=usuario">
+        <div class="form-group row">
+            <div class="col-sm-3"></div>
+            <label class="col-sm-3 col-form-label" for="usuario">
+                Usuario
+            </label>
+            <div class="col-sm-3">
+                <input onkeyup="letraMinuscula1()" class="form-control" id="usuario" type="text" name="usuario"
+                placeholder="Ingrese su usuario" autofocus="yes">
+            </div>
+            <div class="col-sm-3"></div>
+        </div><br>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6">
+                <input class="btn btn-outline-primary btn-block" type="submit" value="Enviar">
+            </div>
+            <div class="col-sm-3"></div>
+        </div>
+    </form>
+</div>
+<?php
+}
+
+if ($puestoRecuperar
+    && $recuperarCorreo 
+    && !$puestoCliente)
+{
 	?>
     <div class="container-fluid">
         <div class="row">
@@ -111,7 +120,7 @@ if ($puestoRecuperar && $recuperarCorreo && !$puestoCliente) {
                 <h2 class="title">Recuperar con correo</h2>
             </div>
             <div class="col-sm-1">
-                <a class="btn btn-outline-secondary" href="recuperar_contrasena.php"><</a>
+                <a class="btn btn-outline-secondary btn-block" href="recuperar_contrasena.php"><</a>
             </div>
         </div><br>
         <form method="POST" action="procesos/recuperar_contrasena_proceso.php?con=correo">
@@ -137,7 +146,10 @@ if ($puestoRecuperar && $recuperarCorreo && !$puestoCliente) {
     </div>
     <?php
 }
-if (!$puestoCliente && !$puestoRecuperar) {
+
+if (!$puestoCliente 
+    && !$puestoRecuperar)
+{
 	?>
     <div class="container-fluid">
         <div class="row">
@@ -146,7 +158,7 @@ if (!$puestoCliente && !$puestoRecuperar) {
                 <h2 class="title">Recuperaración de contraseña</h2>
             </div>
             <div class="col-sm-1">
-                <a class="btn btn-outline-secondary" href="login.php"><</a>
+                <a class="btn btn-outline-secondary btn-block" href="login.php"><</a>
             </div>
         </div><br>
 
@@ -165,5 +177,4 @@ if (!$puestoCliente && !$puestoRecuperar) {
 }
 ?>
 </body>
-
 </html>
